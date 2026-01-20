@@ -9,7 +9,7 @@ const pipelines = [
       { name: "test", status: "success", duration: 120 },
       { name: "deploy", status: "success", duration: 60 }
     ],
-    triggeredBy: "aj.garcia",
+    triggeredBy: "aj.gordo",
     triggeredAt: new Date().toISOString(),
     duration: 225,
     environment: "production"
@@ -54,7 +54,7 @@ const pipelines = [
       { name: "test", status: "success", duration: 95 },
       { name: "deploy", status: "success", duration: 45 }
     ],
-    triggeredBy: "aj.garcia",
+    triggeredBy: "aj.gordo",
     triggeredAt: new Date().toISOString(),
     duration: 170,
     environment: "production"
@@ -164,7 +164,7 @@ const deployments = [
     version: "v2.4.1",
     environment: "production",
     status: "success",
-    deployedBy: "aj.garcia",
+    deployedBy: "aj.gordo",
     deployedAt: new Date().toISOString(),
     duration: 58
   },
@@ -184,7 +184,7 @@ const deployments = [
     version: "v3.0.2",
     environment: "production",
     status: "success",
-    deployedBy: "aj.garcia",
+    deployedBy: "aj.gordo",
     deployedAt: new Date().toISOString(),
     duration: 42
   },
@@ -227,7 +227,7 @@ const activityFeed = [
     id: 1,
     type: "deployment",
     message: "hr-portal-api v2.4.1 deployed to production",
-    user: "aj.garcia",
+    user: "aj.gordo",
     timestamp: new Date().toISOString()
   },
   {
@@ -248,7 +248,7 @@ const activityFeed = [
     id: 4,
     type: "deployment",
     message: "notification-worker v3.0.2 deployed to production",
-    user: "aj.garcia",
+    user: "aj.gordo",
     timestamp: new Date().toISOString()
   },
   {

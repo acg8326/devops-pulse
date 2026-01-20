@@ -11,7 +11,7 @@ export const pipelines = [
       { name: "test", status: "success", duration: 120 },
       { name: "deploy", status: "success", duration: 60 }
     ],
-    triggeredBy: "aj.garcia",
+    triggeredBy: "aj.gordo",
     triggeredAt: "2025-01-20T08:30:00Z",
     duration: 225,
     environment: "production"
@@ -56,7 +56,7 @@ export const pipelines = [
       { name: "test", status: "success", duration: 95 },
       { name: "deploy", status: "success", duration: 45 }
     ],
-    triggeredBy: "aj.garcia",
+    triggeredBy: "aj.gordo",
     triggeredAt: "2025-01-20T06:00:00Z",
     duration: 170,
     environment: "production"
@@ -166,7 +166,7 @@ export const deployments = [
     version: "v2.4.1",
     environment: "production",
     status: "success",
-    deployedBy: "aj.garcia",
+    deployedBy: "aj.gordo",
     deployedAt: "2025-01-20T08:35:00Z",
     duration: 58
   },
@@ -186,7 +186,7 @@ export const deployments = [
     version: "v3.0.2",
     environment: "production",
     status: "success",
-    deployedBy: "aj.garcia",
+    deployedBy: "aj.gordo",
     deployedAt: "2025-01-20T06:05:00Z",
     duration: 42
   },
@@ -229,7 +229,7 @@ export const activityFeed = [
     id: 1,
     type: "deployment",
     message: "hr-portal-api v2.4.1 deployed to production",
-    user: "aj.garcia",
+    user: "aj.gordo",
     timestamp: "2025-01-20T08:35:00Z"
   },
   {
@@ -250,7 +250,7 @@ export const activityFeed = [
     id: 4,
     type: "deployment",
     message: "notification-worker v3.0.2 deployed to production",
-    user: "aj.garcia",
+    user: "aj.gordo",
     timestamp: "2025-01-20T06:05:00Z"
   },
   {
@@ -288,7 +288,7 @@ export const pipelineHistoryLog = [
     pipelineName: "hr-portal-api",
     branch: "main",
     status: "success",
-    triggeredBy: "aj.garcia",
+    triggeredBy: "aj.gordo",
     startedAt: "2025-01-20T08:30:00Z",
     finishedAt: "2025-01-20T08:34:15Z",
     duration: 255,
@@ -332,7 +332,7 @@ export const pipelineHistoryLog = [
     pipelineName: "notification-worker",
     branch: "develop",
     status: "success",
-    triggeredBy: "aj.garcia",
+    triggeredBy: "aj.gordo",
     startedAt: "2025-01-19T18:30:00Z",
     finishedAt: "2025-01-19T18:33:10Z",
     duration: 190,
@@ -354,7 +354,7 @@ export const pipelineHistoryLog = [
     pipelineName: "frontend-dashboard",
     branch: "main",
     status: "success",
-    triggeredBy: "aj.garcia",
+    triggeredBy: "aj.gordo",
     startedAt: "2025-01-19T12:00:00Z",
     finishedAt: "2025-01-19T12:04:30Z",
     duration: 270,
@@ -387,7 +387,7 @@ export const pipelineHistoryLog = [
     pipelineName: "notification-worker",
     branch: "hotfix/email-bug",
     status: "failed",
-    triggeredBy: "aj.garcia",
+    triggeredBy: "aj.gordo",
     startedAt: "2025-01-18T14:15:00Z",
     finishedAt: "2025-01-18T14:17:30Z",
     duration: 150,
@@ -450,7 +450,7 @@ export const alerts = [
     status: "resolved",
     createdAt: "2025-01-19T22:30:00Z",
     acknowledgedAt: "2025-01-19T22:35:00Z",
-    acknowledgedBy: "aj.garcia"
+    acknowledgedBy: "aj.gordo"
   },
   {
     id: 5,
@@ -478,6 +478,6 @@ export const alerts = [
     status: "resolved",
     createdAt: "2025-01-19T14:20:00Z",
     acknowledgedAt: "2025-01-19T14:25:00Z",
-    acknowledgedBy: "aj.garcia"
+    acknowledgedBy: "aj.gordo"
   }
 ];

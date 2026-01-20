@@ -37,7 +37,7 @@ export default function UserMenu() {
         <div className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center">
           <span className="text-sm font-medium text-white">AJ</span>
         </div>
-        <span className="text-sm text-slate-300">aj.garcia</span>
+        <span className="text-sm text-slate-300">aj.gordo</span>
       </button>
 
       {isOpen && (
@@ -48,7 +48,7 @@ export default function UserMenu() {
                 <span className="text-lg font-medium text-white">AJ</span>
               </div>
               <div>
-                <p className="text-sm font-medium text-white">AJ Garcia</p>
+                <p className="text-sm font-medium text-white">Aj Gordo</p>
                 <p className="text-xs text-slate-400">DevOps Engineer</p>
               </div>
             </div>
