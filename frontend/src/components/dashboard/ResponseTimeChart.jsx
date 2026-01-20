@@ -31,9 +31,9 @@ export default function ResponseTimeChart() {
   return (
     <Card>
       <h2 className="text-lg font-semibold text-white mb-4">Response Times (24h)</h2>
-      <div className="h-64">
+      <div className="h-48 sm:h-56 md:h-64">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={responseTimeData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
+          <LineChart data={responseTimeData} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
             <XAxis
               dataKey="time"

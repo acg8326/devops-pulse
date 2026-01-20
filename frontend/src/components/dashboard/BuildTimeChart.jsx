@@ -37,12 +37,12 @@ export default function BuildTimeChart({ pipelines }) {
   return (
     <Card>
       <h2 className="text-lg font-semibold text-white mb-4">Pipeline Build Times</h2>
-      <div className="h-64">
+      <div className="h-48 sm:h-56 md:h-64">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={buildTimes}
             layout="vertical"
-            margin={{ top: 10, right: 30, left: 10, bottom: 0 }}
+            margin={{ top: 10, right: 30, left: 100, bottom: 0 }}
           >
             <XAxis
               type="number"

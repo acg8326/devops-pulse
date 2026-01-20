@@ -35,15 +35,15 @@ export default function ServerStatusChart({ servers }) {
   return (
     <Card>
       <h2 className="text-lg font-semibold text-white mb-4">Server Status Overview</h2>
-      <div className="h-64">
+      <div className="h-48 sm:h-56 md:h-64">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
               data={data}
               cx="50%"
               cy="50%"
-              innerRadius={60}
-              outerRadius={90}
+              innerRadius={40}
+              outerRadius={70}
               paddingAngle={5}
               dataKey="value"
             >
