@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./contexts";
 import { Layout } from "./components/layout";
+import { DashboardSkeleton } from "./components/dashboard";
 import { Dashboard, Pipelines, Servers, Deployments } from "./pages";
 import { useRealtimeData } from "./hooks";
 
@@ -17,12 +19,7 @@ function AppContent() {
   if (loading) {
     return (
       <Layout>
-        <div className="flex items-center justify-center h-96">
-          <div className="text-center">
-            <div className="w-12 h-12 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-slate-400">Loading dashboard...</p>
-          </div>
-        </div>
+        <DashboardSkeleton />
       </Layout>
     );
   }
@@ -101,9 +98,11 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </ThemeProvider>
   );
 }
 

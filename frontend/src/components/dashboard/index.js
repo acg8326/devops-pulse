@@ -8,3 +8,4 @@ export { default as DeploymentHistory } from './DeploymentHistory';
 export { default as EnvironmentFilter } from './EnvironmentFilter';
 export { default as PipelineChart } from './PipelineChart';
 export { default as DeploymentChart } from './DeploymentChart';
+export { default as DashboardSkeleton } from './DashboardSkeleton';
