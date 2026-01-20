@@ -6,6 +6,8 @@ export { default as ThemeToggle } from './ThemeToggle';
 export { default as NotificationsDropdown } from './NotificationsDropdown';
 export { default as SettingsModal } from './SettingsModal';
 export { default as UserMenu } from './UserMenu';
+export { default as ErrorBoundary } from './ErrorBoundary';
+export { LoadingSpinner, LoadingOverlay, LoadingPage } from './Loading';
 export { 
   Skeleton, 
   CardSkeleton, 

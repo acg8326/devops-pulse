@@ -7,7 +7,10 @@ import {
   DeploymentHistory,
   EnvironmentFilter,
   PipelineChart,
-  DeploymentChart
+  DeploymentChart,
+  ServerStatusChart,
+  ResponseTimeChart,
+  BuildTimeChart
 } from "../components/dashboard";
 import { SearchInput } from "../components/common";
 import { pipelineHistory, deploymentHistory } from "../data/mockData";
@@ -98,6 +101,12 @@ export default function Dashboard({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <PipelineChart data={pipelineHistory} />
         <DeploymentChart data={deploymentHistory} />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <ServerStatusChart servers={servers} />
+        <ResponseTimeChart />
+        <BuildTimeChart pipelines={pipelines} />
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-6">

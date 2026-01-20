@@ -1,6 +1,7 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import api from "../services/api";
 import socketService from "../services/socket";
+import { useToast } from "../contexts";
 
 export function useRealtimeData() {
   const [pipelines, setPipelines] = useState([]);
@@ -10,6 +11,11 @@ export function useRealtimeData() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const toastRef = useRef(null);
+
+  // Store toast in ref to avoid dependency issues
+  const toast = useToast();
+  toastRef.current = toast;
 
   // Fetch initial data
   const fetchData = useCallback(async () => {
@@ -50,6 +56,15 @@ export function useRealtimeData() {
       setPipelines((prev) => 
         prev.map((p) => (p.id === updatedPipeline.id ? updatedPipeline : p))
       );
+
+      // Show toast based on status
+      if (toastRef.current) {
+        if (updatedPipeline.status === "success") {
+          toastRef.current.success(`${updatedPipeline.name} pipeline completed successfully`);
+        } else if (updatedPipeline.status === "failed") {
+          toastRef.current.error(`${updatedPipeline.name} pipeline failed`);
+        }
+      }
     });
     
     // Listen for server updates
@@ -57,6 +72,11 @@ export function useRealtimeData() {
       setServers((prev) => 
         prev.map((s) => (s.id === updatedServer.id ? updatedServer : s))
       );
+
+      // Show toast for critical servers
+      if (toastRef.current && updatedServer.status === "critical") {
+        toastRef.current.warning(`${updatedServer.name} is in critical state`);
+      }
     });
     
     // Listen for new activities

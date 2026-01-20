@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "./contexts";
+import { ThemeProvider, ToastProvider } from "./contexts";
 import { Layout } from "./components/layout";
 import { DashboardSkeleton } from "./components/dashboard";
+import { ErrorBoundary, LoadingPage } from "./components/common";
 import { Dashboard, Pipelines, Servers, Deployments, History, Alerts } from "./pages";
 import { useRealtimeData } from "./hooks";
 
@@ -88,11 +89,15 @@ function AppContent() {
 
 function App() {
   return (
-    <ThemeProvider>
-      <Router>
-        <AppContent />
-      </Router>
-    </ThemeProvider>
+    <ErrorBoundary showDetails={import.meta.env.DEV}>
+      <ThemeProvider>
+        <ToastProvider>
+          <Router>
+            <AppContent />
+          </Router>
+        </ToastProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 
