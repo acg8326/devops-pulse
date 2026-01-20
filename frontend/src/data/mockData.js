@@ -281,3 +281,203 @@ export const deploymentHistory = [
   { date: "Jan 19", production: 2, staging: 6, development: 7 },
   { date: "Jan 20", production: 4, staging: 5, development: 10 }
 ];
+
+export const pipelineHistoryLog = [
+  {
+    id: 1,
+    pipelineName: "hr-portal-api",
+    branch: "main",
+    status: "success",
+    triggeredBy: "aj.garcia",
+    startedAt: "2025-01-20T08:30:00Z",
+    finishedAt: "2025-01-20T08:34:15Z",
+    duration: 255,
+    environment: "production"
+  },
+  {
+    id: 2,
+    pipelineName: "frontend-dashboard",
+    branch: "feature/new-charts",
+    status: "success",
+    triggeredBy: "maria.santos",
+    startedAt: "2025-01-20T07:15:00Z",
+    finishedAt: "2025-01-20T07:19:30Z",
+    duration: 270,
+    environment: "staging"
+  },
+  {
+    id: 3,
+    pipelineName: "payment-service",
+    branch: "hotfix/timeout-fix",
+    status: "failed",
+    triggeredBy: "john.reyes",
+    startedAt: "2025-01-20T06:45:00Z",
+    finishedAt: "2025-01-20T06:48:21Z",
+    duration: 201,
+    environment: "development"
+  },
+  {
+    id: 4,
+    pipelineName: "auth-service",
+    branch: "main",
+    status: "success",
+    triggeredBy: "lisa.cruz",
+    startedAt: "2025-01-19T22:10:00Z",
+    finishedAt: "2025-01-19T22:14:45Z",
+    duration: 285,
+    environment: "production"
+  },
+  {
+    id: 5,
+    pipelineName: "notification-worker",
+    branch: "develop",
+    status: "success",
+    triggeredBy: "aj.garcia",
+    startedAt: "2025-01-19T18:30:00Z",
+    finishedAt: "2025-01-19T18:33:10Z",
+    duration: 190,
+    environment: "staging"
+  },
+  {
+    id: 6,
+    pipelineName: "hr-portal-api",
+    branch: "feature/leave-module",
+    status: "failed",
+    triggeredBy: "maria.santos",
+    startedAt: "2025-01-19T15:20:00Z",
+    finishedAt: "2025-01-19T15:22:45Z",
+    duration: 165,
+    environment: "development"
+  },
+  {
+    id: 7,
+    pipelineName: "frontend-dashboard",
+    branch: "main",
+    status: "success",
+    triggeredBy: "aj.garcia",
+    startedAt: "2025-01-19T12:00:00Z",
+    finishedAt: "2025-01-19T12:04:30Z",
+    duration: 270,
+    environment: "production"
+  },
+  {
+    id: 8,
+    pipelineName: "payment-service",
+    branch: "main",
+    status: "success",
+    triggeredBy: "john.reyes",
+    startedAt: "2025-01-19T09:45:00Z",
+    finishedAt: "2025-01-19T09:49:15Z",
+    duration: 255,
+    environment: "production"
+  },
+  {
+    id: 9,
+    pipelineName: "auth-service",
+    branch: "feature/oauth",
+    status: "success",
+    triggeredBy: "lisa.cruz",
+    startedAt: "2025-01-18T16:30:00Z",
+    finishedAt: "2025-01-18T16:34:00Z",
+    duration: 210,
+    environment: "staging"
+  },
+  {
+    id: 10,
+    pipelineName: "notification-worker",
+    branch: "hotfix/email-bug",
+    status: "failed",
+    triggeredBy: "aj.garcia",
+    startedAt: "2025-01-18T14:15:00Z",
+    finishedAt: "2025-01-18T14:17:30Z",
+    duration: 150,
+    environment: "development"
+  }
+];
+
+export const alerts = [
+  {
+    id: 1,
+    type: "critical",
+    title: "High CPU Usage",
+    message: "prod-redis-01 CPU usage exceeded 90% for more than 5 minutes",
+    server: "prod-redis-01",
+    metric: "cpu",
+    value: 94,
+    threshold: 90,
+    status: "active",
+    createdAt: "2025-01-20T09:10:00Z",
+    acknowledgedAt: null,
+    acknowledgedBy: null
+  },
+  {
+    id: 2,
+    type: "warning",
+    title: "High Memory Usage",
+    message: "prod-db-01 memory usage is at 85%",
+    server: "prod-db-01",
+    metric: "memory",
+    value: 85,
+    threshold: 80,
+    status: "active",
+    createdAt: "2025-01-20T08:45:00Z",
+    acknowledgedAt: null,
+    acknowledgedBy: null
+  },
+  {
+    id: 3,
+    type: "critical",
+    title: "Pipeline Failed",
+    message: "payment-service pipeline failed at test stage",
+    server: null,
+    metric: null,
+    value: null,
+    threshold: null,
+    status: "acknowledged",
+    createdAt: "2025-01-20T07:50:00Z",
+    acknowledgedAt: "2025-01-20T07:55:00Z",
+    acknowledgedBy: "john.reyes"
+  },
+  {
+    id: 4,
+    type: "warning",
+    title: "Disk Space Low",
+    message: "prod-db-01 disk usage is at 72%",
+    server: "prod-db-01",
+    metric: "disk",
+    value: 72,
+    threshold: 70,
+    status: "resolved",
+    createdAt: "2025-01-19T22:30:00Z",
+    acknowledgedAt: "2025-01-19T22:35:00Z",
+    acknowledgedBy: "aj.garcia"
+  },
+  {
+    id: 5,
+    type: "info",
+    title: "Deployment Completed",
+    message: "hr-portal-api v2.4.1 successfully deployed to production",
+    server: null,
+    metric: null,
+    value: null,
+    threshold: null,
+    status: "resolved",
+    createdAt: "2025-01-20T08:35:00Z",
+    acknowledgedAt: null,
+    acknowledgedBy: null
+  },
+  {
+    id: 6,
+    type: "critical",
+    title: "Service Unavailable",
+    message: "notification-worker failed health check 3 times",
+    server: "prod-web-01",
+    metric: null,
+    value: null,
+    threshold: null,
+    status: "resolved",
+    createdAt: "2025-01-19T14:20:00Z",
+    acknowledgedAt: "2025-01-19T14:25:00Z",
+    acknowledgedBy: "aj.garcia"
+  }
+];

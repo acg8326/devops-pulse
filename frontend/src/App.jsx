@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts";
 import { Layout } from "./components/layout";
 import { DashboardSkeleton } from "./components/dashboard";
-import { Dashboard, Pipelines, Servers, Deployments } from "./pages";
+import { Dashboard, Pipelines, Servers, Deployments, History, Alerts } from "./pages";
 import { useRealtimeData } from "./hooks";
 
 function AppContent() {
@@ -75,21 +75,11 @@ function AppContent() {
         />
         <Route 
           path="/history" 
-          element={
-            <div className="text-center py-12">
-              <h2 className="text-2xl font-bold text-white mb-2">History</h2>
-              <p className="text-slate-400">Coming soon...</p>
-            </div>
-          } 
+          element={<History />} 
         />
         <Route 
           path="/alerts" 
-          element={
-            <div className="text-center py-12">
-              <h2 className="text-2xl font-bold text-white mb-2">Alerts</h2>
-              <p className="text-slate-400">Coming soon...</p>
-            </div>
-          } 
+          element={<Alerts />} 
         />
       </Routes>
     </Layout>
