@@ -5,3 +5,6 @@ export { default as ServerHealthCard } from './ServerHealthCard';
 export { default as ServerHealthList } from './ServerHealthList';
 export { default as ActivityFeed } from './ActivityFeed';
 export { default as DeploymentHistory } from './DeploymentHistory';
+export { default as EnvironmentFilter } from './EnvironmentFilter';
+export { default as PipelineChart } from './PipelineChart';
+export { default as DeploymentChart } from './DeploymentChart';

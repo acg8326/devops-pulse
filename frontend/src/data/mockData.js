@@ -261,3 +261,23 @@ export const activityFeed = [
     timestamp: "2025-01-20T09:20:00Z"
   }
 ];
+
+export const pipelineHistory = [
+  { date: "Jan 14", success: 12, failed: 2, total: 14 },
+  { date: "Jan 15", success: 18, failed: 1, total: 19 },
+  { date: "Jan 16", success: 15, failed: 3, total: 18 },
+  { date: "Jan 17", success: 22, failed: 2, total: 24 },
+  { date: "Jan 18", success: 19, failed: 4, total: 23 },
+  { date: "Jan 19", success: 16, failed: 1, total: 17 },
+  { date: "Jan 20", success: 21, failed: 3, total: 24 }
+];
+
+export const deploymentHistory = [
+  { date: "Jan 14", production: 3, staging: 5, development: 8 },
+  { date: "Jan 15", production: 2, staging: 7, development: 12 },
+  { date: "Jan 16", production: 4, staging: 6, development: 9 },
+  { date: "Jan 17", production: 5, staging: 8, development: 14 },
+  { date: "Jan 18", production: 3, staging: 4, development: 11 },
+  { date: "Jan 19", production: 2, staging: 6, development: 7 },
+  { date: "Jan 20", production: 4, staging: 5, development: 10 }
+];
