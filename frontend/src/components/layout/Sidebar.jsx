@@ -1,16 +1,17 @@
+import { NavLink } from "react-router-dom";
 import { LayoutDashboard, GitBranch, Server, Rocket, Clock, AlertTriangle } from "lucide-react";
 
 const navItems = [
-  { icon: LayoutDashboard, label: "Dashboard", active: true },
-  { icon: GitBranch, label: "Pipelines", active: false },
-  { icon: Server, label: "Servers", active: false },
-  { icon: Rocket, label: "Deployments", active: false },
-  { icon: Clock, label: "History", active: false },
-  { icon: AlertTriangle, label: "Alerts", active: false },
+  { icon: LayoutDashboard, label: "Dashboard", path: "/" },
+  { icon: GitBranch, label: "Pipelines", path: "/pipelines" },
+  { icon: Server, label: "Servers", path: "/servers" },
+  { icon: Rocket, label: "Deployments", path: "/deployments" },
+  { icon: Clock, label: "History", path: "/history" },
+  { icon: AlertTriangle, label: "Alerts", path: "/alerts" },
 ];
 
 export default function Sidebar() {
-  const getNavClass = (isActive) => {
+  const getNavClass = ({ isActive }) => {
     const base = "flex items-center gap-3 px-4 py-2.5 rounded-lg transition-colors";
     if (isActive) {
       return `${base} bg-emerald-600 text-white`;
@@ -26,10 +27,10 @@ export default function Sidebar() {
             const Icon = item.icon;
             return (
               <li key={item.label}>
-                <a href="#" className={getNavClass(item.active)}>
+                <NavLink to={item.path} className={getNavClass}>
                   <Icon className="w-5 h-5" />
                   <span className="font-medium">{item.label}</span>
-                </a>
+                </NavLink>
               </li>
             );
           })}
