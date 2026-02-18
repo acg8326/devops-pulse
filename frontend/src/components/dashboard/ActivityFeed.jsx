@@ -19,6 +19,7 @@ export default function ActivityFeed({ activities }) {
     };
     return styles[type] || styles.pipeline;
   };
+  
 
   const formatTime = (timestamp) => {
     const date = new Date(timestamp);
